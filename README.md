@@ -23,14 +23,7 @@ IWOP 24기 주현명,이상윤 팀의 방학 프로젝트 : 할일해야지의 �
 ## Environment configuration
 
 ```
-SERVER_PORT
-JWT_SECRET
-EXPIRES_IN
-DB_USER
-DB_PASS
-DB_PORT
-DB_HOST
-DB_NAME
+VITE_SERVER_URI
 ```
 
 ## 주의사항
