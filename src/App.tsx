@@ -532,39 +532,6 @@ const ModalBackground = styled.div`
     z-index: 9999999;
 `;
 
-const SearchBar = styled.div`
-    display: flex;
-    align-items: center;
-    width: 455px;
-`;
-
-const InputContainer = styled.div`
-    width: 100%;
-    height: 70px;
-    padding: 23px 26px;
-    background: #ffffff;
-    border: 3px solid #318273;
-    display: flex;
-    align-items: center;
-`;
-
-const SearchInput = styled.input`
-    font-size: 20px;
-    width: 100%;
-    &:focus {
-        outline: none;
-    }
-    outline: none;
-    border: none;
-`;
-
-const Search = styled.div`
-    width: 70px;
-    height: 70px;
-    background: #318273;
-    border: 3px solid #318273;
-`;
-
 const PageWrapper = styled.div`
     width: 1300px;
     height: 650px;
