@@ -76,19 +76,26 @@ const App = () => {
     };
 
     const editTodo = () => {
-        client
-            .put(`/todo/${editId}`, { ...currentTodo, title: inputText })
-            .then((_res) => {
-                setModalshow(false);
-                setInputText('');
-                setCurrentType('');
-                setModalMode('');
-            });
+        if (inputText === currentTodo?.title) {
+            alert('할일 이름이 이전과 동일합니다 다른 이름을 시도해주세요.');
+        } else if (inputText.trim() === '') {
+            alert('수정할 이름을 작성해주세요.');
+        } else {
+            client
+                .put(`/todo/${editId}`, { ...currentTodo, title: inputText })
+                .then((_res) => {
+                    setModalshow(false);
+                    setInputText('');
+                    setCurrentType('');
+                    setModalMode('');
+                });
+        }
     };
 
     const logout = () => {
         localStorage.removeItem('accessToken');
         localStorage.removeItem('username');
+        alert('로그아웃 되었습니다.');
         navigate('/login', { replace: true });
     };
 

@@ -48,7 +48,9 @@ const Signup = () => {
                     if (res.data.success) navigate('/login', { replace: true });
                 },
                 (err) => {
-                    setError('아이디 또는 비밀번호가 잘못되었습니다.');
+                    setError(
+                        '이미 존재하는 계정입니다 다른 이름을 시도해주세요.',
+                    );
                 },
             );
         }
