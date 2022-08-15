@@ -434,7 +434,13 @@ const LogoutButton = styled.div`
     font-weight: 600;
     color: var(--textColor);
     right: calc((100% - 1300px) / 2 + 20px);
+    padding: 10px;
     cursor: pointer;
+    &:hover {
+        background: #e2e9e7;
+        border-radius: 7px;
+        transition: background 0.3s ease-in-out;
+    }
 `;
 
 const SpanStrong = styled.span`
