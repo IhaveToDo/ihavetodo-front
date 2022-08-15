@@ -51,6 +51,7 @@ const App = () => {
     const [currentTodo, setCurrentTodo] = useState<Todo | null>();
 
     useEffect(() => {
+        document.title = '메인';
         if (localStorage.getItem('accessToken') == null) {
             navigate('/login', { replace: true });
         }

@@ -19,6 +19,7 @@ const Login = () => {
     const [showError, setShowError] = useState<boolean>(false);
 
     useEffect(() => {
+        document.title = '로그인';
         if (localStorage.getItem('accessToken') != null) {
             navigate('/', { replace: true });
         }
